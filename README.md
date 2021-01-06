@@ -1,16 +1,15 @@
 # CUDA Programming
- - A collection of thread is a block
- - A collection of blocks associated with a given kernel launch is a
-   grid
+ - A collection of threads is a block
+ - A collection of blocks associated with a given kernel launch is a grid
  - GPU functions are called kernels
  - Kernels are launched with execution configuration
    (gpu_function<<1,2>>()) => <<<number of blocks in a grid, number of
    thread in each block>>>
 
-*someKernel<<<1, 1>>() is configured to run in a single thread block which has a single thread and will therefore run only once.</br>
-someKernel<<<1, 10>>() is configured to run in a single thread block which has 10 threads and will therefore run 10 times.</br>
-someKernel<<<10, 1>>() is configured to run in 10 thread blocks which each have a single thread and will therefore run 10 times.</br>
-someKernel<<<10, 10>>() is configured to run in 10 thread blocks which each have 10 threads and will therefore run 100 times.*</br>
+   *someKernel<<<1, 1>>() is configured to run in a single thread block which has a single thread and will therefore run only once.</br>
+   someKernel<<<1, 10>>() is configured to run in a single thread block which has 10 threads and will therefore run 10 times.</br>
+   someKernel<<<10, 1>>() is configured to run in 10 thread blocks which each have a single thread and will therefore run 10 times.</br>
+   someKernel<<<10, 10>>() is configured to run in 10 thread blocks which each have 10 threads and will therefore run 100 times.*</br>
 
 ## Variables:
 
